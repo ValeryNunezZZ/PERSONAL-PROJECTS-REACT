@@ -1,0 +1,367 @@
+:root{
+  --bgc-body: rgb(151, 215, 255); 
+  --bgc-nums: rgb(244, 248, 255);
+  --c-nums: rgb(60, 79, 105);
+  --bgc-shadow-nums: rgb(115, 163, 181);
+
+  --bgc-del: rgb(14, 106, 171);
+  --bgc-shadow-del: rgb(6, 33, 70);
+  --c-del: rgb(255, 255, 255);
+
+  --bgc-igual: rgb(1, 202, 213);
+  --bgc-shadow-igual: rgb(0, 111, 119);
+  --c-igual: rgb(255, 255, 255);
+
+  --bgc-back: rgb(205, 231, 255);
+
+  --bgc-vacio: rgb(153, 199, 255);
+
+  --bgc-nums-pressed: rgb(232, 239, 255);
+  --bgc-del-pressed: rgb(11, 78, 125);
+  --bgc-igual-pressed: rgb(0, 172, 181);
+
+  transition: all 0.5s ease;
+}
+
+.dos{
+  --bgc-body: rgb(255, 226, 255); 
+  --bgc-nums: rgb(251, 244, 255);
+  --c-nums: rgb(105, 60, 104);
+  --bgc-shadow-nums: rgb(181, 115, 176);
+
+  --bgc-del: rgb(119, 14, 171);
+  --bgc-shadow-del: rgb(65, 6, 70);
+  --c-del: rgb(255, 255, 255);
+
+  --bgc-igual: rgb(213, 111, 1);
+  --bgc-shadow-igual: rgb(119, 48, 0);
+  --c-igual: rgb(255, 255, 255);
+
+  --bgc-back: rgb(253, 205, 255);
+
+  --bgc-inputs-container: rgb(119, 0, 183);
+
+  --bgc-vacio: rgb(255, 153, 235);
+
+  --bgc-nums-pressed: rgb(243, 224, 253);
+  --bgc-del-pressed: rgb(93, 10, 135);
+  --bgc-igual-pressed: rgb(200, 104, 1);
+
+  transition: all 0.5s ease;
+}
+
+.uno{
+  --bgc-body: rgb(0, 0, 0); 
+  --bgc-nums: rgb(251, 244, 255);
+  --c-nums: rgb(65, 1, 96);
+  --bgc-shadow-nums: rgb(157, 115, 181);
+
+  --bgc-del: rgb(59, 171, 14);
+  --bgc-shadow-del: rgb(24, 70, 6);
+  --c-del: rgb(255, 255, 255);
+
+
+  --bgc-igual: rgb(213, 86, 1);
+  --bgc-shadow-igual: rgb(119, 48, 0);
+  --c-igual: rgb(255, 255, 255);
+
+  --bgc-back: rgb(63, 0, 105);
+
+  --bgc-inputs-container: rgb(119, 0, 183);
+
+  --bgc-vacio: orange;
+
+  --bgc-nums-pressed: rgb(234, 218, 243);
+  --bgc-del-pressed: rgb(48, 143, 11);
+  --bgc-igual-pressed: rgb(181, 73, 0);
+
+  transition: all 0.5s ease;
+}
+
+
+*{
+  padding: 0;
+  border: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bgc-body);
+}
+
+span{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.buttons-container{
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: 
+    "num7 num8 num9 DEL"
+    "num4 num5 num6 MAS"
+    "num1 num2 num3 MENOS"
+    "PUNTO num0 DIAGONAL POR"
+    "RESET RESET IGUAL IGUAL"
+  ;
+
+  gap: 20px;
+}
+
+.buttons-container button{
+  background-color: var(--bgc-nums);
+  color: var(--c-nums);
+
+  font-size: 30px;
+  font-weight: bold;
+
+  height: 45px;
+
+  border-radius: 5px;
+  
+  box-shadow: 0px 5px 0px var(--bgc-shadow-nums);
+}
+
+.num1{
+  grid-area: num1;
+}
+
+.num2{
+  grid-area: num2;
+}
+
+.num3{
+  grid-area: num3;
+}
+
+.num4{
+  grid-area: num4;
+}
+
+.num5{
+  grid-area: num5;
+}
+
+.num6{
+  grid-area: num6;
+}
+
+.num7{
+  grid-area: num7;
+}
+
+.num8{
+  grid-area: num8;
+}
+
+.num9{
+  grid-area: num9;
+}
+
+.num0{
+  grid-area: num0;
+}
+
+.DEL{
+  grid-area: DEL;
+
+  background-color: var(--bgc-del) !important;
+  color: var(--c-del) !important;
+  box-shadow: 0px 5px 0px var(--bgc-shadow-del) !important;
+  font-size: 20px !important;
+}
+
+.MAS{
+  grid-area: MAS;
+}
+
+.MENOS{
+  grid-area: MENOS;
+}
+
+.DIAGONAL{
+  grid-area: DIAGONAL;
+}
+
+.PUNTO{
+  grid-area: PUNTO;
+}
+
+.RESET{
+  grid-area: RESET;
+
+  background-color: var(--bgc-del) !important;
+  color: var(--c-del) !important;
+  box-shadow: 0px 5px 0px var(--bgc-shadow-del) !important;
+  font-size: 20px !important;
+}
+
+.POR{
+  grid-area: POR;
+}
+
+.IGUAL{
+  grid-area: IGUAL;
+
+  background-color: var(--bgc-igual) !important;
+  color: var(--c-igual) !important;
+  box-shadow: 0px 5px 0px var(--bgc-shadow-igual) !important;
+  font-size: 25px !important;
+}
+
+.container-all{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width:fit-content;
+}
+
+.buttons-container{
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--bgc-back);
+}
+
+.container-all input{
+  width: 100%;
+
+  background-color: var(--bgc-back);
+  border-radius: 5px;
+  padding: 25px 20px;
+
+  color: white;
+  font-size: 30px;
+  text-align: right;
+}
+
+.head-container{
+  background-color: transparent !important;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 0px !important;
+}
+
+.inputs-container{
+  position: relative;
+
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+
+  width: 65px;
+  height: 25px;
+  padding: 5px;
+
+  background-color: var(--bgc-back);
+
+  border-radius: 200px;
+}
+
+.inputs-container::after{
+  content: 'THEME';
+
+  position: absolute;
+
+  font-size: 11px;
+  left: -55px;
+}
+
+.inputs-container input{
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+
+#vacio{
+  position: absolute;
+  top: 5px;
+
+  z-index: 100;
+
+  background-color: var(--bgc-vacio);
+  border-radius: 100%;
+
+  width: 15px;
+  height: 15px;
+  transition: all 0.5s ease;
+
+  cursor: pointer;
+}
+
+label{
+  position: absolute;
+  z-index: 1000;
+
+  top: -16px;
+
+  font-size: 12px;
+  color: white;
+}
+
+.label1{
+  left: 8px;
+}
+
+.label2{
+  left: 28px;
+}
+
+.label3{
+  left: 48px;
+}
+
+.radio1:checked ~ #vacio{
+  left: 5px;
+}
+
+.radio2:checked ~ #vacio{
+  left: 25px;
+}
+
+.radio3:checked ~ #vacio{
+  left: 45px;
+}
+
+.buttons-container button{
+  cursor: pointer;
+}
+
+.buttons-container button:hover{
+  background-color: var(--bgc-nums-pressed);
+  box-shadow: 0px 3px 0px var(--bgc-shadow-nums);
+  transition: all 0.1s ease;
+}
+
+.DEL:hover{
+  background-color: var(--bgc-del-pressed) !important;
+  box-shadow: 0px 3px 0px var(--bgc-shadow-del) !important;
+  transition: all 0.1s ease;
+}
+
+.RESET:hover{
+  background-color: var(--bgc-del-pressed) !important;
+  box-shadow: 0px 3px 0px var(--bgc-shadow-del) !important;
+  transition: all 0.1s ease;
+}
+
+.IGUAL:hover{
+  background-color: var(--bgc-igual-pressed) !important;
+  box-shadow: 0px 3px 0px var(--bgc-shadow-igual) !important;
+  transition: all 0.1s ease;
+}
