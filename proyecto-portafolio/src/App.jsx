@@ -3,6 +3,7 @@ import './App.css'
 //images
 import yoIntroFinal from './img/yoIntroFinal.GIF';
 import yoSaludando from './img/yoSaludando.png'
+import phone from './img/phoneT.png'
 
 import proyectouno from './img/proyecto-uno.PNG'
 import proyectodos from './img/proyecto-dos.PNG'
@@ -119,7 +120,44 @@ function App() {
         </div>
       </section>
 
-      
+      <section className='contact-section'>
+        <div className='image-container'>
+          <img src={phone}/>
+        </div>
+        <form>
+          <h3>Send me a message</h3>
+
+          <div className='container-input'>
+            <label>NAME</label>
+            <input placeholder='Your name'></input>
+          </div>
+
+          <div className='container-input'>
+            <label>EMAIL ADDRESS</label>
+            <input placeholder='Your email'></input>
+          </div>
+
+          <div className='container-input'>
+            <label>MESSAGE</label>
+            <textarea placeholder='Your message...'></textarea>
+          </div>
+
+          <button type='submit'>SUBMIT</button>
+        </form>
+      </section>
+
+      <footer>
+        <div className='izq-container-footer'>
+          <img src={yoSaludando}/>
+          <div className='name-container'>
+            Valery<br></br>Núñez
+          </div>
+        </div>
+
+        <div className='der-container-footer'>
+
+        </div>
+      </footer>
     </>
   )
 }
