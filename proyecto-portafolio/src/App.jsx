@@ -1,4 +1,5 @@
 import './App.css'
+import Navbar from './Navbar';
 
 //images
 import yoIntroFinal from './img/yoIntroFinal.GIF';
@@ -19,7 +20,7 @@ function App() {
   return (
     <>
       <section className='main-section'>
-        <nav>
+{/*         <nav>
           <div className='navIzq'>
           Valery Núñez
           </div>
@@ -31,7 +32,9 @@ function App() {
               <li><a>Contact</a></li>
             </ul>
           </div>
-        </nav>
+        </nav> */}
+
+        <Navbar />
 
         <div className='container-presentation'>
           <div className='container-izq'>
@@ -50,18 +53,6 @@ function App() {
       </section>
 
       <section className='develope-section'>
-        <div className='about-me-container'>
-          <div className='about-me-up'>
-            <h2>About me</h2>
-            <p>I am a appasionated human that love trnaform an idea in a reality with creativity, enthusiat and uniqunues.</p>
-          </div>
-
-          <div className='about-me-down'>
-            <img className='yoSaludando' src={yoSaludando}/>
-            <div className='blanck-container'></div>
-            <div className='cv-container'></div>
-          </div>
-        </div>
 
         <div className='skills-container'>
           <div className='skills-up'>
@@ -87,42 +78,65 @@ function App() {
             </div>
           </div>
         </div>
+
+        <div className='about-me-container'>
+          <div className='about-me-up'>
+            <img className='yoSaludando' src={yoSaludando}/>
+          </div>
+          <div className='about-me-down'>
+            <h2>About me</h2>{/* 
+            <p>I am a appasionated human that love trnaform an idea in a reality with creativity, enthusiat and uniqunues.</p> */}
+          </div>
+        </div>
       </section>
 
       <section className='projects-section'>
-        <h2>Some projects</h2>
+        <h2 className='someProjects-h2'>Some projects</h2>
 
-        <div className='project-container'>
-          <img src={proyectouno}/>
-          <div className='info-container'>
-            <h3>Super calculator</h3>
+        <div className='projects-container'>
+          <div className='project-container'>
+            <img src={proyectouno}/>
+            <div className='info-container'>
+              <h3>Super calculator</h3>
 
-            <p>This projects was made with my own hands to the start to the end</p>
+              <p>This projects was made with my own hands to the start to the end</p>
+              <br></br>
+              <br></br>
+              <button>Open link</button>
+            </div>
           </div>
-        </div>
 
-        <div className='project-container'>
-          <img src={proyectouno}/>
-          <div className='info-container'>
-            <h3>Super calculator</h3>
+          <div className='project-container'>
+            <img src={proyectouno}/>
+            <div className='info-container'>
+              <h3>Super calculator</h3>
 
-            <p>This projects was made with my own hands to the start to the end</p>
+              <p>This projects was made with my own hands to the start to the end</p>
+              <br></br>
+              <br></br>
+              <button>Open link</button>
+            </div>
           </div>
-        </div>
 
-        <div className='project-container'>
-          <img src={proyectouno}/>
-          <div className='info-container'>
-            <h3>Super calculator</h3>
+          <div className='project-container'>
+            <img src={proyectouno}/>
+            <div className='info-container'>
+              <h3>Super calculator</h3>
 
-            <p>This projects was made with my own hands to the start to the end</p>
+              <p>This projects was made with my own hands to the start to the end</p>
+              <br></br>
+              <br></br>
+              <button>Open link</button>
+            </div>
           </div>
         </div>
       </section>
 
       <section className='contact-section'>
         <div className='image-container'>
-          <img src={phone}/>
+          <div className='circle'>
+            <img src={phone}/>
+          </div>
         </div>
         <form>
           <h3>Send me a message</h3>
@@ -148,14 +162,16 @@ function App() {
 
       <footer>
         <div className='izq-container-footer'>
-          <img src={yoSaludando}/>
-          <div className='name-container'>
-            Valery<br></br>Núñez
-          </div>
+hoo
         </div>
 
         <div className='der-container-footer'>
-
+          <div className='name-container'>
+            Valery<br></br>Núñez
+          </div>
+          <div className='img-footer'>
+            <img src={yoSaludando}/>
+          </div>
         </div>
       </footer>
     </>
