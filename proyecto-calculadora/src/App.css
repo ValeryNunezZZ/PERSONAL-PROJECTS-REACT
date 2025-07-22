@@ -88,23 +88,53 @@
   font-family: sans-serif;
 }
 
+html{
+  font-size: 12px;
+}
+
+@media screen and (max-width: 500px) {
+  html{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  html{
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  html{
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  html{
+    font-size: 15px;
+  }
+}
+
 .body{
   display: flex;
   justify-content: center;
   align-items: center;
 
+  padding: 4em 0;
+
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--bgc-body);
 }
 
 span{
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .buttons-container{
-  width: 400px;
+  width: 33.3em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -116,21 +146,21 @@ span{
     "RESET RESET IGUAL IGUAL"
   ;
 
-  gap: 20px;
+  gap: 2em;
 }
 
 .buttons-container button{
   background-color: var(--bgc-nums);
   color: var(--c-nums);
 
-  font-size: 30px;
+  font-size: 2.5rem;
   font-weight: bold;
 
-  height: 45px;
+  height: 3.75rem;
 
-  border-radius: 5px;
+  border-radius: 0.4em;
   
-  box-shadow: 0px 5px 0px var(--bgc-shadow-nums);
+  box-shadow: 0em 0.2em 0em var(--bgc-shadow-nums);
 }
 
 .num1{
@@ -178,8 +208,8 @@ span{
 
   background-color: var(--bgc-del) !important;
   color: var(--c-del) !important;
-  box-shadow: 0px 5px 0px var(--bgc-shadow-del) !important;
-  font-size: 20px !important;
+  box-shadow: 0em 0.2em 0em var(--bgc-shadow-del) !important;
+  font-size: 1.6rem !important;
 }
 
 .MAS{
@@ -203,8 +233,8 @@ span{
 
   background-color: var(--bgc-del) !important;
   color: var(--c-del) !important;
-  box-shadow: 0px 5px 0px var(--bgc-shadow-del) !important;
-  font-size: 20px !important;
+  box-shadow: 0em 0.2em 0em var(--bgc-shadow-del) !important;
+  font-size: 1.6rem !important;
 }
 
 .POR{
@@ -216,20 +246,20 @@ span{
 
   background-color: var(--bgc-igual) !important;
   color: var(--c-igual) !important;
-  box-shadow: 0px 5px 0px var(--bgc-shadow-igual) !important;
-  font-size: 25px !important;
+  box-shadow: 0em 0.2em 0em var(--bgc-shadow-igual) !important;
+  font-size: 1.6rem !important;
 }
 
 .container-all{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.6em;
   width:fit-content;
 }
 
 .buttons-container{
-  padding: 20px;
-  border-radius: 5px;
+  padding: 1.6em;
+  border-radius: 0.4em;
   background-color: var(--bgc-back);
 }
 
@@ -238,10 +268,10 @@ span{
 
   background-color: var(--bgc-back);
   border-radius: 5px;
-  padding: 25px 20px;
+  padding: 0.8em 0.8em;
 
   color: white;
-  font-size: 30px;
+  font-size: 2.5rem;
   text-align: right;
 }
 
@@ -253,23 +283,23 @@ span{
   align-items: center;
   justify-content: space-between;
 
-  padding: 20px 0px !important;
+  padding: 1.2em 0em !important;
 }
 
 .inputs-container{
   position: relative;
 
   display: flex;
-  gap: 5px;
+  gap: 0.4rem;
   flex-direction: row;
 
-  width: 65px;
-  height: 25px;
-  padding: 5px;
+  width: 5.4em;
+  height: 2em;
+  padding: 0.5em;
 
   background-color: var(--bgc-back);
 
-  border-radius: 200px;
+  border-radius: 16.6em;
 }
 
 .inputs-container::after{
@@ -277,8 +307,8 @@ span{
 
   position: absolute;
 
-  font-size: 11px;
-  left: -55px;
+  font-size: 1rem;
+  left: -4.6em;
 }
 
 .inputs-container input{
@@ -290,15 +320,15 @@ span{
 
 #vacio{
   position: absolute;
-  top: 5px;
+  top: 0.4em;
 
   z-index: 100;
 
   background-color: var(--bgc-vacio);
   border-radius: 100%;
 
-  width: 15px;
-  height: 15px;
+  width: 1.25em;
+  height: 1.25em;
   transition: all 0.5s ease;
 
   cursor: pointer;
@@ -308,34 +338,34 @@ label{
   position: absolute;
   z-index: 1000;
 
-  top: -16px;
+  top: -1.33em;
 
-  font-size: 12px;
+  font-size: 1em;
   color: white;
 }
 
 .label1{
-  left: 8px;
+  left: 0.67em;
 }
 
 .label2{
-  left: 28px;
+  left: 2.33em;
 }
 
 .label3{
-  left: 48px;
+  left: 4em;
 }
 
 .radio1:checked ~ #vacio{
-  left: 5px;
+  left: 0.4em;
 }
 
 .radio2:checked ~ #vacio{
-  left: 25px;
+  left: 2.08em;
 }
 
 .radio3:checked ~ #vacio{
-  left: 45px;
+  left: 3.75em;
 }
 
 .buttons-container button{
@@ -344,24 +374,24 @@ label{
 
 .buttons-container button:hover{
   background-color: var(--bgc-nums-pressed);
-  box-shadow: 0px 3px 0px var(--bgc-shadow-nums);
+  box-shadow: 0px 0.25em 0px var(--bgc-shadow-nums);
   transition: all 0.1s ease;
 }
 
 .DEL:hover{
   background-color: var(--bgc-del-pressed) !important;
-  box-shadow: 0px 3px 0px var(--bgc-shadow-del) !important;
+  box-shadow: 0px 0.25em 0px var(--bgc-shadow-del) !important;
   transition: all 0.1s ease;
 }
 
 .RESET:hover{
   background-color: var(--bgc-del-pressed) !important;
-  box-shadow: 0px 3px 0px var(--bgc-shadow-del) !important;
+  box-shadow: 0px 0.25em 0px var(--bgc-shadow-del) !important;
   transition: all 0.1s ease;
 }
 
 .IGUAL:hover{
   background-color: var(--bgc-igual-pressed) !important;
-  box-shadow: 0px 3px 0px var(--bgc-shadow-igual) !important;
+  box-shadow: 0px 0.25em 0px var(--bgc-shadow-igual) !important;
   transition: all 0.1s ease;
 }
