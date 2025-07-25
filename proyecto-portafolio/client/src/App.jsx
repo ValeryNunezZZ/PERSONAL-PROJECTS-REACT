@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './Navbar';
+import ContactForm from './ContactForm';
 
 //images
 import yoIntroFinal from './img/yoIntroFinal.GIF';
@@ -7,12 +8,15 @@ import yoSaludando from './img/yoSaludando.png'
 import phone from './img/phoneT.png'
 
 import proyectouno from './img/proyecto-uno.PNG'
-import proyectodos from './img/proyecto-dos.PNG'
+/* import proyectodos from './img/proyecto-dos.PNG' */
+import proyectoCalculadora from './img/proyectoCalculadora.png'
+import proyectoIpTracker from './img/proyectoIpTracker.png'
 
 import cssLogo from './img/cssLogo.png'
 import htmlLogo from './img/htmlLogo.png'
 import jsLogo from './img/jsLogo.png'
 import reactLogo from './img/reactLogo.png'
+import cLogo from './img/cLogo.png'
 
 
 function App() {
@@ -65,16 +69,16 @@ function App() {
               <img src={cssLogo}/>
             </div>
             <div className='skill-2'>
-              <img src={cssLogo}/>
+              <img src={htmlLogo}/>
             </div>
             <div className='skill-3'>
-              <img src={cssLogo}/>
+              <img src={jsLogo}/>
             </div>
             <div className='skill-4'>
-              <img src={cssLogo}/>
+              <img src={reactLogo}/>
             </div>
             <div className='skill-5'>
-              <img src={cssLogo}/>
+              <img src={cLogo}/>
             </div>
           </div>
         </div>
@@ -107,7 +111,7 @@ function App() {
           </div>
 
           <div className='project-container'>
-            <img src={proyectouno}/>
+            <img src={proyectoIpTracker}/>
             <div className='info-container'>
               <h3>Super calculator</h3>
 
@@ -119,7 +123,7 @@ function App() {
           </div>
 
           <div className='project-container'>
-            <img src={proyectouno}/>
+            <img src={proyectoCalculadora}/>
             <div className='info-container'>
               <h3>Super calculator</h3>
 
@@ -133,36 +137,20 @@ function App() {
       </section>
 
       <section className='contact-section'>
-        <div className='image-container'>
-          <div className='circle'>
-            <img src={phone}/>
+        <h2>Let's work together</h2>
+        <div className='container-form'>
+          <div className='image-container'>
+            <div className='circle'>
+              <img src={phone}/>
+            </div>
           </div>
+          <ContactForm />
         </div>
-        <form>
-          <h3>Send me a message</h3>
-
-          <div className='container-input'>
-            <label>NAME</label>
-            <input placeholder='Your name'></input>
-          </div>
-
-          <div className='container-input'>
-            <label>EMAIL ADDRESS</label>
-            <input placeholder='Your email'></input>
-          </div>
-
-          <div className='container-input'>
-            <label>MESSAGE</label>
-            <textarea placeholder='Your message...'></textarea>
-          </div>
-
-          <button type='submit'>SUBMIT</button>
-        </form>
       </section>
 
       <footer>
         <div className='izq-container-footer'>
-hoo
+
         </div>
 
         <div className='der-container-footer'>
