@@ -105,7 +105,8 @@ html{
     position: relative;
 }
 
-.container-buttons > button{
+.scisor-button, .paper-button, .rock-button{
+    
     width: 12em;
     height: 12em;
 
@@ -119,7 +120,7 @@ html{
     user-select: none;
 }
 
-.container-buttons > button:nth-child(1){
+.rock-button{
     right: 0;
     left: 0;
     bottom: 0;
@@ -132,13 +133,13 @@ html{
     box-shadow:0em 0.6em var(--rock-color-dark);
 }
 
-.container-buttons > button:nth-child(1)::after{
+.rock-button::after{
     content: '';
     
     border: 1.4em solid var(--rock-color-light);
 }
 
-.container-buttons > button:nth-child(2){
+.paper-button{
     left: -2em;
     top: -2em;
     margin: auto;
@@ -150,13 +151,13 @@ html{
     box-shadow:0em 0.6em var(--hand-color-dark);
 }
 
-.container-buttons > button:nth-child(2)::after{
+.paper-button::after{
     content: '';
     
     border: 1.4em solid var(--hand-color-light);
 }
 
-.container-buttons > button:nth-child(3){
+.scisor-button{
     right: -2em;
     top: -2em;
     margin: auto;
@@ -168,13 +169,13 @@ html{
     box-shadow:0em 0.6em var(--scisor-color-dark);
 }
 
-.container-buttons > button:nth-child(3)::after{
+.scisor-button::after{
     content: '';
 
     border: 1.4em solid var(--scisor-color-light);
 }
 
-.container-buttons > button:nth-child(1)::after, .container-buttons > button:nth-child(2)::after, .container-buttons > button:nth-child(3)::after{
+.rock-button::after, .paper-button::after, .scisor-button::after{
     content: '';
 
     box-sizing: border-box;
@@ -204,10 +205,10 @@ html{
     width: 70vw;
 }
 
-.hand-selected{
+.rock-selected, .paper-selected, .scisor-selected{
     transition: all 1s ease !important;
-    width: 15em !important;
-    height: 15em !important;
+    width: 14rem !important;
+    height: 14rem !important;
 
     left: 0em !important;
     right: 100% !important;
@@ -222,19 +223,17 @@ html{
 }
 
 .resRobot{
-    width: 12em;
-    height: 12em;
+    width: 14rem !important;
+    height: 14rem !important;
 
     border-radius: 100%;
 
-    background-color: antiquewhite;
-
     position: absolute;
 
-    left: calc(100% - 12rem);
-    top: 0em;
-    bottom: 0em;
-    margin: auto;
+    left: calc(100% - 12rem) !important;
+    top: 0em !important;
+    bottom: 0em !important;
+    margin: auto !important;
 }
 
 .p-again{

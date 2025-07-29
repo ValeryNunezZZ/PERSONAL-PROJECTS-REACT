@@ -1,15 +1,17 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Score from "./Score";
 
 function Seleccion(){
 
     const [estadoJuego, setEstadoJuego] = useState("");
+    const [resHuman, setResHuman] = useState(-1);
     const [resRobot, setResRobot] = useState("");
     const [score, setScore] = useState(0);
     const [seleccionado, setSelecionado] = useState(false);
 
+
     function seleccionar(res){
-        
+        setResHuman(res);
         setSelecionado(true);
 
         const respuestas = ["rock", "paper", "scisor"];
@@ -57,6 +59,30 @@ function Seleccion(){
 
     }
 
+    function seleccionDeEstilos(s){
+
+        if(resHuman == 0 && resHuman == s){
+            return 'rock-selected';
+        }else if(resHuman == 1 && resHuman == s){
+            return 'paper-selected';
+        }else if(resHuman == 2 && resHuman == s){
+            return 'scisor-selected';
+        }else{
+            return 'd-none';
+        }
+    }
+
+    function seleccionDeEstilosRobot(){
+
+        if(resRobot === 'rock'){
+            return 'rock-button';
+        }else if(resRobot === 'paper'){
+            return 'paper-button';
+        }else{
+            return 'scisor-button';
+        }
+    }
+
     return(
 
         <>
@@ -65,14 +91,17 @@ function Seleccion(){
 
             <div>
                 <div className={`container-buttons ${seleccionado ? 'container-buttons-selected' : ''}`}>
-                    <button className={`${seleccionado ? 'hand-selected':''}`} onClick={()=>{seleccionar(0)}}></button>
-                    <button className={`${seleccionado ? 'd-none':''}`} onClick={()=>{seleccionar(1)}}></button>
-                    <button className={`${seleccionado ? 'd-none':''}`} onClick={()=>{seleccionar(2)}}></button>
+
+                    <button className={`rock-button ${seleccionado ? seleccionDeEstilos(0):''}`} onClick={()=>{seleccionar(0)}}></button>
+                    <button className={`paper-button ${seleccionado ? seleccionDeEstilos(1):''}`} onClick={()=>{seleccionar(1)}}></button>
+                    <button className={`scisor-button ${seleccionado ? seleccionDeEstilos(2):''}`} onClick={()=>{seleccionar(2)}}></button>
+                    
                     <div className={`${seleccionado ? 'p-again':'d-none'}`}>
                         <span>{estadoJuego}</span>
                         <button onClick={()=>{setSelecionado(false)}}>PLAY AGAIN</button>
                     </div>
-                    <div className={`${seleccionado?'resRobot':'d-none'}`}>res</div>
+
+                    <div className={`resRobot ${seleccionado?seleccionDeEstilosRobot():'d-none'}`}></div>
                 </div>
         
             </div>
