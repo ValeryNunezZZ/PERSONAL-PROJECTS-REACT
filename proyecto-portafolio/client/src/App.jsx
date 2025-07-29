@@ -48,7 +48,7 @@ function App() {
 
           <div className='container-der'>
             <h1>
-              <span>Hello!</span><br></br>
+              <span id='init'>Hello!</span><br></br>
               I'm Valery<br></br>
               Núñez
             </h1>
@@ -114,7 +114,7 @@ function App() {
       </section>
 
       <section className='projects-section'>
-        <h2 className='someProjects-h2'>Some projects</h2>
+        <h2 id='projects' className='someProjects-h2'>Some projects</h2>
 
         <div className='projects-container'>
           <div className='project-container'>
@@ -159,7 +159,7 @@ function App() {
                 </div>
               </div>
               <div className='container-buttons'>
-                <button>Visit site</button>
+                <button><a href='https://personal-projects-react-8u13.vercel.app/'>Visit site</a></button>
                 <button><span>Code</span><img src={gitHubLogo}/></button>
               </div>
             </div>
@@ -183,7 +183,7 @@ function App() {
                 </div>
               </div>
               <div className='container-buttons'>
-                <button>Visit site</button>
+                <button><a href='https://personal-projects-react.vercel.app'>Visit site</a></button>
                 <button><span>Code</span><img src={gitHubLogo}/></button>
               </div>
             </div>
@@ -191,7 +191,7 @@ function App() {
         </div>
       </section>
 
-      <section className='about-me-section'>
+      <section id='about' className='about-me-section'>
         <h2>About me</h2>
         <div className='about-me-container'>
             <div className='about-me-up'>
@@ -206,7 +206,7 @@ function App() {
         </div>
       </section>
 
-      <section className='contact-section'>
+      <section id='contact' className='contact-section'>
         <h2>Let's work together</h2>
         <div className='container-form'>
           <div className='image-container'>

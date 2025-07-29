@@ -625,6 +625,11 @@ h2{
   width: 50%;
 }
 
+.container-buttons button a{
+  text-decoration: none;
+  color: white;
+}
+
 .container-buttons button:nth-child(2){
   background-color: black;
 
