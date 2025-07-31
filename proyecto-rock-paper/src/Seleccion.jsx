@@ -86,24 +86,25 @@ function Seleccion(){
     return(
 
         <>
+            <div className="body">
+                <Score score={score} />
 
-            <Score score={score} />
+                <div>
+                    <div className={`container-buttons ${seleccionado ? 'container-buttons-selected' : ''}`}>
 
-            <div>
-                <div className={`container-buttons ${seleccionado ? 'container-buttons-selected' : ''}`}>
+                        <button className={`rock-button ${seleccionado ? seleccionDeEstilos(0):''}`} onClick={()=>{seleccionar(0)}}></button>
+                        <button className={`paper-button ${seleccionado ? seleccionDeEstilos(1):''}`} onClick={()=>{seleccionar(1)}}></button>
+                        <button className={`scisor-button ${seleccionado ? seleccionDeEstilos(2):''}`} onClick={()=>{seleccionar(2)}}></button>
+                        
+                        <div className={`${seleccionado ? 'p-again':'d-none'}`}>
+                            <span>{estadoJuego}</span>
+                            <button onClick={()=>{setSelecionado(false)}}>PLAY AGAIN</button>
+                        </div>
 
-                    <button className={`rock-button ${seleccionado ? seleccionDeEstilos(0):''}`} onClick={()=>{seleccionar(0)}}></button>
-                    <button className={`paper-button ${seleccionado ? seleccionDeEstilos(1):''}`} onClick={()=>{seleccionar(1)}}></button>
-                    <button className={`scisor-button ${seleccionado ? seleccionDeEstilos(2):''}`} onClick={()=>{seleccionar(2)}}></button>
-                    
-                    <div className={`${seleccionado ? 'p-again':'d-none'}`}>
-                        <span>{estadoJuego}</span>
-                        <button onClick={()=>{setSelecionado(false)}}>PLAY AGAIN</button>
+                        <div className={`resRobot ${seleccionado?seleccionDeEstilosRobot():'d-none'}`}></div>
                     </div>
 
-                    <div className={`resRobot ${seleccionado?seleccionDeEstilosRobot():'d-none'}`}></div>
                 </div>
-        
             </div>
         </>
     )
