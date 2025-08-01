@@ -1,0 +1,21 @@
+function Pais({bandera, nombre, poblacion, region, capital, setMostrar}){
+
+    return(
+        <>
+            <div onClick={()=>{setMostrar(true)}} className="container-pais">
+                <div className="bandera-container">
+                    <img src={bandera}></img>
+                </div>
+
+                <div className="info-container">
+                    <h3>{nombre}</h3>
+                    <span className="titles"><span>Population: </span>{poblacion}</span>
+                    <span className="titles"><span>Region: </span>{region}</span>
+                    <span className="titles"><span>Capital: </span>{capital}</span>
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default Pais
