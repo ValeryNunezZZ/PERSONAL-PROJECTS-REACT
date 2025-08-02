@@ -1,8 +1,8 @@
-function Pais({bandera, nombre, poblacion, region, capital, setMostrar}){
+function Pais({bandera, nombre, poblacion, region, capital, handleSeleccionarPais}){
 
     return(
         <>
-            <div onClick={()=>{setMostrar(true)}} className="container-pais">
+            <div onClick={()=>{handleSeleccionarPais(nombre)}} className="container-pais">
                 <div className="bandera-container">
                     <img src={bandera}></img>
                 </div>
