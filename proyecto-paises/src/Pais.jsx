@@ -1,8 +1,8 @@
-function Pais({bandera, nombre, poblacion, region, capital, handleSeleccionarPais}){
+function Pais({bandera, nombre, poblacion, region, capital, handleSeleccionarPais, darkMode}){
 
     return(
         <>
-            <div onClick={()=>{handleSeleccionarPais(nombre)}} className="container-pais">
+            <div onClick={()=>{handleSeleccionarPais(nombre)}} className={`container-pais ${darkMode?'dark':''}`}>
                 <div className="bandera-container">
                     <img src={bandera}></img>
                 </div>

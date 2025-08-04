@@ -1,14 +1,14 @@
 import arrowBack from './img/arrowBack.png'
 
-function PaisSelected({infoPaisSelected, handleDeseleccionarPais}){
+function PaisSelected({infoPaisSelected, handleDeseleccionarPais, darkMode}){
 
     return(
         <>
-            <div className="pais-selected-container">
+            <div className={`pais-selected-container ${darkMode?'dark':''}`}>
 
                 <button onClick={()=>{handleDeseleccionarPais()}} className="back"><span><img src={arrowBack}></img></span>Back</button>
 
-                <div className="pais-desc-container">
+                <div className={`pais-desc-container ${darkMode?'dark':''}`}>
                     <div className="pais-desc-container-bandera-container">
                         <img src={infoPaisSelected.flag}></img>
                     </div>

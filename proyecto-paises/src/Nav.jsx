@@ -1,11 +1,15 @@
 import moon from './img/moon.png'
-function Nav(){
+
+function Nav({setDarkMode, darkMode}){
     return(
         <>
-            <nav>
+            <nav className={`${darkMode?'dark':''}`}>
                 <h1>Where in the world?</h1>
                 
-                <div className="darkMode-container">
+                <div onClick={()=>{
+                    if(darkMode) return setDarkMode(false);
+                    else return setDarkMode(true);
+                }} className="darkMode-container">
                     <span><img src={moon}></img></span>
                     <span>Dark mode</span>
                 </div>

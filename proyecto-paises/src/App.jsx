@@ -10,6 +10,8 @@ import arrowDown from './img/arrowDown.png'
 
 function App() {
 
+  const [darkMode, setDarkMode] = useState(false);
+
   const [mostrar, setMostrar] = useState(false);
   const [infoPaisSelected, setInfoPaisSelected] = useState(null);
   const [region, setRegion] = useState('');
@@ -36,14 +38,14 @@ function App() {
 
   return (
     <>
-      <Nav/>
+      <Nav setDarkMode={setDarkMode} darkMode={darkMode}/>
 
       {
         (mostrar && infoPaisSelected)?(
-          <PaisSelected  infoPaisSelected={infoPaisSelected} handleDeseleccionarPais={handleDeseleccionarPais}/>
+          <PaisSelected  infoPaisSelected={infoPaisSelected} handleDeseleccionarPais={handleDeseleccionarPais} darkMode={darkMode}/>
         ):(
           <>
-          <div className='buscador-container'>
+          <div className={`buscador-container ${darkMode?'dark':''}`}>
             <div className='search-container'>
               <span>
                 <img src={search}></img>
@@ -66,12 +68,12 @@ function App() {
             </div>
           </div>
 
-          <div className='container-paises'>
+          <div className={`container-paises ${darkMode?'dark':''}`}>
             {
               (paisesFiltrados.length === 0)?(
                 <p className='nm'>There are no matches</p>
               ):(
-                paisesFiltrados.map((pais, index)=><Pais key={index} bandera={pais.flags.png} nombre={pais.name} poblacion={pais.population} region={pais.region} capital={pais.capital} handleSeleccionarPais={handleSeleccionarPais}/>)
+                paisesFiltrados.map((pais, index)=><Pais key={index} bandera={pais.flags.png} nombre={pais.name} poblacion={pais.population} region={pais.region} capital={pais.capital} handleSeleccionarPais={handleSeleccionarPais} darkMode={darkMode}/>)
               )
             }
           </div>
