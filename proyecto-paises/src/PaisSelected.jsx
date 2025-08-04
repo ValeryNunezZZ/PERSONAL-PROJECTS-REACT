@@ -1,10 +1,12 @@
+import arrowBack from './img/arrowBack.png'
+
 function PaisSelected({infoPaisSelected, handleDeseleccionarPais}){
 
     return(
         <>
             <div className="pais-selected-container">
 
-                <button onClick={()=>{handleDeseleccionarPais()}} className="back">Back</button>
+                <button onClick={()=>{handleDeseleccionarPais()}} className="back"><span><img src={arrowBack}></img></span>Back</button>
 
                 <div className="pais-desc-container">
                     <div className="pais-desc-container-bandera-container">

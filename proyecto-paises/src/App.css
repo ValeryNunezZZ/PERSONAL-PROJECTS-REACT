@@ -1,3 +1,19 @@
+:root{
+  --whithe-light: rgb(231, 231, 231);
+  --whithe-dark: rgba(255, 255, 255, 0.578);
+  --dark-light: rgb(58, 58, 58);
+  --dark-dark: rgb(39, 39, 39);
+  --shadow: rgba(0, 0, 0, 0.264);
+}
+
+:root{
+  --whithe-light: rgb(231, 231, 231);
+  --whithe-dark: rgba(255, 255, 255, 0.578);
+  --dark-light: rgb(58, 58, 58);
+  --dark-dark: rgb(39, 39, 39);
+  --shadow: rgba(0, 0, 0, 0.264);
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -9,13 +25,13 @@
 }
 
 body{
-  background-color: rgb(39, 39, 39);
+  background-color: var(--dark-dark);
 }
 
 .container-paises{
   padding: 0 5vw;
 
-  background-color: rgb(39, 39, 39);
+  background-color: var(--dark-dark);
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -23,14 +39,14 @@ body{
 }
 
 .container-paises div{
-  background-color: rgb(58, 58, 58);
+  background-color: var(--dark-light);
 
   display: flex;
   flex-direction: column;
 
   border-radius: 0.5rem;
 
-  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.097);
+  box-shadow: 0rem 0rem 1rem var(--shadow);
 
   cursor: pointer;
 }
@@ -53,7 +69,7 @@ body{
   display: flex;
   gap: 0.5rem;
 
-  color: white;
+  color: var(--whithe-light);
 
   padding: 2rem;
 }
@@ -79,9 +95,9 @@ nav{
   justify-content: space-between;
   align-items: center;
 
-  background-color: rgb(58, 58, 58);
+  background-color: var(--dark-light);
 
-  color: white;
+  color: var(--whithe-light);
 
   padding: 2rem 5vw;
 
@@ -93,13 +109,33 @@ nav h1{
   font-weight: bold;
 }
 
+.darkMode-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.2rem;
+
+  gap: 0.7rem;
+}
+
+.darkMode-container span:nth-child(1){
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.darkMode-container span img{
+  width: 100%;
+  height: 100%;
+}
+
 
 /* BUSCADOR */
 
 .nm{
   margin: auto;
 
-  color: rgba(255, 255, 255, 0.578);
+  color: var(--whithe-dark);
 
   margin-top: 7rem;
 
@@ -109,44 +145,80 @@ nav h1{
 .buscador-container{
   padding: 5vh 5vw;
 
-  background-color: rgb(39, 39, 39);
+  background-color: var(--dark-dark);
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.filtro-container{
+  padding: 0 1.5rem;
+
+  gap: 3rem;
+}
+
 select{
   width: fit-content;
+  height: 3rem;
 
-  background-color: rgb(58, 58, 58);
+  background-color: var(--dark-light);
 
   appearance: none;
 
-  padding: 1.5rem 4rem 1.5rem 1.5rem;
-
   border-radius: 5px;
 
-  color: white;
+  color: var(--whithe-light);
 
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 input{
 
   width: 30vw;
-
-  background-color: rgb(58, 58, 58);
+  height: 3rem;
 
   appearance: none;
 
-  padding: 1.5rem;
+  padding: 0rem 1rem;
 
   border-radius: 5px;
 
-  color: white;
+  color: var(--whithe-light);
 
-  font-size: 1rem;
+  font-size: 1.2rem;
+
+  background-color: var(--dark-light);
+}
+
+.search-container, .filtro-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--dark-light);
+
+  box-shadow: 0 0 0.8rem var(--shadow);
+
+  border-radius: 0.3rem;
+}
+
+.filtro-container span{
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+
+.search-container span{
+  width: 1.2rem;
+  height: 1.2rem;
+
+  margin: 0.9rem 0rem 0.9rem 0.9rem;
+}
+
+.search-container span img, .filtro-container span img{
+  width: 100%;
+  height: 100%;
 }
 
 /* PAISSELECTED */
@@ -159,19 +231,34 @@ input{
 
   width: fit-content;
 
-  background-color: rgb(58, 58, 58);
+  background-color: var(--dark-light);
 
-  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.264);
+  box-shadow: 0 0 0.8rem var(--shadow);
 
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
 
   border-radius: 5px;
 
-  color: white;
+  color: var(--whithe-light);
 
   font-size: 1rem;
 
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.back span{
+  height: 1rem;
+  width: 1rem;
+}
+
+.back span img{
+  height: 100%;
+  width: 100%;
 }
 
 .pais-selected-container{
@@ -183,7 +270,7 @@ input{
 
   margin-top: 6rem;
 
-  color: rgb(225, 225, 225);
+  color: var(--whithe-light);
 }
 
 .pais-desc-container{
@@ -262,7 +349,7 @@ h2{
 
   border-radius: 0.1rem;
 
-  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.264);
+  box-shadow: 0 0 0.8rem var(--shadow);
 
-  background-color: rgb(58, 58, 58);
+  background-color: var(--dark-light);
 }

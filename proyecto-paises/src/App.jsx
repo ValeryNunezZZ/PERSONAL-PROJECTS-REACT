@@ -5,6 +5,9 @@ import Pais from './Pais'
 import PaisSelected from './PaisSelected'
 import data from './data.json'
 
+import search from './img/search.png'
+import arrowDown from './img/arrowDown.png'
+
 function App() {
 
   const [mostrar, setMostrar] = useState(false);
@@ -41,15 +44,26 @@ function App() {
         ):(
           <>
           <div className='buscador-container'>
-            <input onChange={(e)=>{setFiltro(e.target.value)}} placeholder='Search for a country...'></input>
-            <select value={region} onChange={(e)=>{setRegion(e.target.value)}}>
-              <option value="">Filter by Region</option>
-              <option value="Africa">Africa</option>
-              <option value="Americas">America</option>
-              <option value="Asia">Asia</option>
-              <option value="Europe">Europa</option>
-              <option value="Oceania">Oceania</option>
-            </select>
+            <div className='search-container'>
+              <span>
+                <img src={search}></img>
+              </span>
+              <input onChange={(e)=>{setFiltro(e.target.value)}} placeholder='Search for a country...'></input>
+            </div>
+
+            <div className='filtro-container'>
+              <select value={region} onChange={(e)=>{setRegion(e.target.value)}}>
+                <option value="">Filter by Region</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">America</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europa</option>
+                <option value="Oceania">Oceania</option>
+              </select>
+              <span>
+                  <img src={arrowDown}></img>
+              </span>
+            </div>
           </div>
 
           <div className='container-paises'>
