@@ -16,7 +16,7 @@ export default function ContactForm(){
         }
 
         try{
-            const res = await fetch("http://localhost:3001/api/contact", {
+            const res = await fetch("https://personal-projects-react-2.onrender.com/api/contact", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(data),
@@ -57,7 +57,7 @@ export default function ContactForm(){
 
             <button type='submit'>SEND</button>
 
-            <p>{status}</p>
+            <p className="status">{status}</p>
         </form>
     );
 }
