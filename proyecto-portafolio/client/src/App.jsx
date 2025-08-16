@@ -7,10 +7,11 @@ import yoIntroFinal from './img/yoIntroFinal.GIF';
 import yoSaludando from './img/yoSaludando.png'
 import phone from './img/phoneT.png'
 
-import proyectouno from './img/proyecto-uno.PNG'
-/* import proyectodos from './img/proyecto-dos.PNG' */
+/* import proyectouno from './img/proyecto-uno.PNG' */
+import proyectoPPT from './img/proyectoPPT.png'
 import proyectoCalculadora from './img/proyectoCalculadora.png'
 import proyectoIpTracker from './img/proyectoIpTracker.png'
+import proyectoPaises from './img/proyectoPaises.png'
 
 import cssLogo from './img/cssLogo.png'
 import htmlLogo from './img/htmlLogo.png'
@@ -18,6 +19,7 @@ import jsLogo from './img/jsLogo.png'
 import reactLogo from './img/reactLogo.png'
 import cLogo from './img/cLogo.png'
 import gitHubLogo from './img/gitHubLogo.png'
+import igLogo from './img/igLogo.png'
 
 
 function App() {
@@ -63,7 +65,17 @@ function App() {
         <div className='skills-container'>
           <div className='skills-up'>
             <h2>Skills</h2>
-            <p>I am a appassionate human that love tranforms an idea in a reality with creativity, enthusiast and uniqunues.</p>
+            <p>
+              I work with <strong>HTML, CSS, Bootstrap,</strong> and <strong>Tailwind CSS</strong> to create responsive and user-friendly interfaces,  
+              while using <strong>JavaScript</strong> to bring them to life with dynamic interactions.  
+              <br></br>
+              <br></br>
+              I also have strong programming foundations in <strong>C++</strong>, with a focus on algorithms and data structures.  
+              <br></br>
+              <br></br>
+              As an active member of the <strong>Algorithm Club</strong> and a regular participant in <strong>competitive programming contests</strong>,  
+              I’m constantly honing my problem-solving skills and striving to write clean, efficient, and elegant code.
+            </p>
           </div>
           
           <div className='slider'>
@@ -118,11 +130,11 @@ function App() {
 
         <div className='projects-container'>
           <div className='project-container'>
-            <img src={proyectouno}/>
+            <img src={proyectoPPT}/>
             <div className='info-container'>
-              <h3>Super calculator</h3>
+              <h3>RPS Arena</h3>
 
-              <p>This projects was made with my own hands to the start to the end</p>
+              <p>Challenge the computer in this responsive and stylish Rock, Paper, Scissors game, designed for smooth gameplay on any device.</p>
               <div className='container-technologies'>
                 <div className='technologie-container'>
                   <img src={cssLogo}/>
@@ -133,10 +145,13 @@ function App() {
                 <div className='technologie-container'>
                   <img src={jsLogo}/>
                 </div>
+                <div className='technologie-container'>
+                  <img src={reactLogo}/>
+                </div>
               </div>
               <div className='container-buttons'>
-                <button>Visit site</button>
-                <button><span>Code</span><img src={gitHubLogo}/></button>
+                <button><a href='https://personal-projects-react-fg1o.vercel.app/'>Visit site</a></button>
+                <button><a href='https://github.com/ValeryNunezZZ/PERSONAL-PROJECTS-REACT/tree/main/proyecto-rock-paper'><span>Code</span><img src={gitHubLogo}/></a></button>
               </div>
             </div>
           </div>
@@ -144,9 +159,9 @@ function App() {
           <div className='project-container'>
             <img src={proyectoIpTracker}/>
             <div className='info-container'>
-              <h3>Super calculator</h3>
+              <h3>IP Hunter</h3>
 
-              <p>This projects was made with my own hands to the start to the end</p>
+              <p>An interactive IP address tracker that pinpoints any IP on a dynamic map, complete with real-time location data and a responsive, user-friendly interface.</p>
               <div className='container-technologies'>
                 <div className='technologie-container'>
                   <img src={cssLogo}/>
@@ -157,10 +172,13 @@ function App() {
                 <div className='technologie-container'>
                   <img src={jsLogo}/>
                 </div>
+                <div className='technologie-container'>
+                  <img src={reactLogo}/>
+                </div>
               </div>
               <div className='container-buttons'>
                 <button><a href='https://personal-projects-react-8u13.vercel.app/'>Visit site</a></button>
-                <button><span>Code</span><img src={gitHubLogo}/></button>
+                <button><a href='https://github.com/ValeryNunezZZ/PERSONAL-PROJECTS-REACT/tree/main/proyecto-ip-address-tracker'><span>Code</span><img src={gitHubLogo}/></a></button>
               </div>
             </div>
           </div>
@@ -168,9 +186,9 @@ function App() {
           <div className='project-container'>
             <img src={proyectoCalculadora}/>
             <div className='info-container'>
-              <h3>Super calculator</h3>
+              <h3>CalcX</h3>
 
-              <p>This projects was made with my own hands to the start to the end</p>
+              <p>A sleek, theme-switching calculator that adapts to any screen size and remembers your preferences while handling all the math you throw at it.</p>
               <div className='container-technologies'>
                 <div className='technologie-container'>
                   <img src={cssLogo}/>
@@ -181,10 +199,40 @@ function App() {
                 <div className='technologie-container'>
                   <img src={jsLogo}/>
                 </div>
+                <div className='technologie-container'>
+                  <img src={reactLogo}/>
+                </div>
               </div>
               <div className='container-buttons'>
                 <button><a href='https://personal-projects-react.vercel.app'>Visit site</a></button>
-                <button><span>Code</span><img src={gitHubLogo}/></button>
+                <button><a href='https://github.com/ValeryNunezZZ/PERSONAL-PROJECTS-REACT/tree/main/proyecto-calculadora'><span>Code</span><img src={gitHubLogo}/></a></button>
+              </div>
+            </div>
+          </div>
+
+          <div className='project-container'>
+            <img src={proyectoPaises}/>
+            <div className='info-container'>
+              <h3>WorldScope</h3>
+
+              <p>A REST Countries API explorer with powerful search, region filters, detailed country pages, border navigation, and light/dark mode for global browsing comfort.</p>
+              <div className='container-technologies'>
+                <div className='technologie-container'>
+                  <img src={cssLogo}/>
+                </div>
+                <div className='technologie-container'>
+                  <img src={htmlLogo}/>
+                </div>
+                <div className='technologie-container'>
+                  <img src={jsLogo}/>
+                </div>
+                <div className='technologie-container'>
+                  <img src={reactLogo}/>
+                </div>
+              </div>
+              <div className='container-buttons'>
+                <button><a href='https://web-d-react-avanzado.vercel.app/'>Visit site</a></button>
+                <button><a href='https://github.com/ValeryNunezZZ/PERSONAL-PROJECTS-REACT/tree/main/proyecto-paises'><span>Code</span><img src={gitHubLogo}/></a></button>
               </div>
             </div>
           </div>
@@ -198,10 +246,14 @@ function App() {
               <img className='yoSaludando' src={yoSaludando}/>
             </div>
             <div className='about-me-down'>
-              <p>Hi I am appasionated studetn that loves code.  start doing some front end projects since 2023, and i have been improving with the years.</p>
-              <p>I also love competitive programming, becuse is one of the most changelleges things that i have ever tried.</p>
-
-              <p>I love drawing and design, but i made those things more because more like a hobby cause i have never had any kind of curse of that</p>
+              <p>
+                Hi, I’m Valery, a Systems Engineering student passionate about tackling challenges of all kinds — especially programming ones. About six months ago, I joined an Algorithm Club where I’ve been sharpening my competitive programming skills to compete with my team in the ICPC.</p>
+              <p>
+                I also love frontend development and enjoy taking on frontend challenges and recreating them. Lately, I’ve been exploring backend development too, which I find really interesting.
+              </p>
+              <p>
+                Besides coding, I’m also passionate about digital drawing. Whenever I can, I love blending my art with the projects I work on — just like this web profile you’re viewing, where all the illustrations were created by me.
+              </p>
             </div>
         </div>
       </section>
@@ -220,7 +272,15 @@ function App() {
 
       <footer>
         <div className='izq-container-footer'>
+          <p>
+            I’m Valery, a Systems Engineering student who loves coding, especially competitive programming and web development. I also enjoy digital drawing and often combine my art with my projects.
+          </p>
+        </div>
 
+        <div className='center-container-footer'>
+          <span className='containerLinks'><span class="material-symbols-outlined">mail</span><a>valery.2012.nr@gmail.com</a></span>
+          <span className='containerLinks'><span><img src={igLogo}></img></span><a href='https://www.instagram.com/valery.nunez.mx?igsh=MWdjejdvam90MjNjdQ%3D%3D&utm_source=qr'>Valery Nuñez</a></span>
+          <span className='containerLinks'><span><img src={gitHubLogo}></img></span><a href='https://github.com/ValeryNunezZZ'>ValeryNunezZZ</a></span>
         </div>
 
         <div className='der-container-footer'>
